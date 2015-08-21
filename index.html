@@ -1,0 +1,60 @@
+<!--
+ http://11159-01.root.nessus.at/EURconverter/ 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Euro conversion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="css/styles.css" rel="stylesheet">
+
+  <script src="js/scripts.js"></script>
+    <script src="js/calculate.js"></script>
+</head>
+<body>
+  <div data-role="page" data-control-title="Choose Currency" id="select">
+      <div data-theme="d" data-role="header">
+          <h1>
+              Currency Converter
+          </h1>
+      </div>
+      <div data-role="content">
+          <h4>
+              Select a currency
+          </h4>
+          <ul data-role="listview" data-divider-theme="b" data-inset="true" id="currencylist">
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Conversion" id="conversion">
+      <div data-theme="d" data-role="header">
+          <a data-role="button" data-theme="b" href="#select" data-icon="home"
+             data-iconpos="notext" class="ui-btn-left" id="gohome">
+          </a>
+          <h4 id="setheader">
+          </h4>
+      </div>
+      <div data-role="content">
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <label for="amount_entered">
+                  Enter the amount
+              </label>
+              <input name="amount_entered" id="amount_entered" placeholder="" value="" type="number" data-clear-btn="true">
+          </div>
+          <a id="toEUR" data-role="button" data-inline="false" data-theme="b" href="#conversion">
+          </a>
+          <a id="toCur" data-role="button" data-inline="false" data-theme="b" href="#conversion">
+          </a>
+          <div id="result" data-controltype="htmlblock">
+              <p>
+              </p>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
